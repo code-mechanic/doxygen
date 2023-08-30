@@ -20,6 +20,13 @@ INPUT                  = ../src
 RECURSIVE              = YES
 GENERATE_LATEX         = NO
 ```
+## Source code stuffs
+- To link document with source code then explore following settings
+```
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+GENERATE_TREEVIEW      = YES
+```
 ## Graphical stuffs
 - To enable class diagram and call graph install graphviz  
     `sudo apt-get install graphviz`
