@@ -1,0 +1,53 @@
+/**
+ * @page lesson9_architecture Architecture and Flow
+ * @brief Design-page documentation that sits above individual APIs.
+ *
+ * @tableofcontents
+ *
+ * @section lesson9_architecture_why Why Use a Page
+ * A Doxygen page is useful when the information does not belong to a single
+ * function, type, or file. State flow, integration notes, and system-level
+ * assumptions usually fit better here than in a header comment.
+ *
+ * @section lesson9_architecture_flow Firmware Update Flow
+ * The public API in @ref lesson9_fw_update follows the state model below.
+ *
+ * @dot
+ * digraph firmware_update_flow {
+ *   rankdir=LR;
+ *   node [shape=box];
+ *   IDLE -> RECEIVING [label="fw_update_begin()"];
+ *   RECEIVING -> VALIDATING [label="fw_update_finalize()"];
+ *   VALIDATING -> READY [label="CRC matches"];
+ *   VALIDATING -> FAULT [label="CRC mismatch"];
+ *   RECEIVING -> FAULT [label="overflow or bad header"];
+ *   READY -> IDLE [label="fw_update_init()"];
+ *   FAULT -> IDLE [label="fw_update_init()"];
+ * }
+ * @enddot
+ *
+ * @section lesson9_architecture_refs Cross References
+ * Pages can link directly to APIs and types:
+ * - @ref fw_update_begin
+ * - @ref fw_update_write_chunk
+ * - @ref fw_update_finalize
+ * - @ref fw_update_state_t
+ * - @ref fw_image_header_t
+ *
+ * @section lesson9_architecture_snippet Snippet from a Real Example
+ * This block is pulled from the example file with `@snippet`, so the document
+ * stays tied to source code instead of a copied text block.
+ *
+ * @snippet firmware_update_example.c basic_usage
+ *
+ * @section lesson9_architecture_next Where to Inspect Output
+ * After generating docs, open the page view and then the function page for
+ * @ref fw_update_finalize to inspect the call graph and inline source links.
+ * The source browser will then let you jump into the private helper that
+ * performs the validation work.
+ */
+
+/**
+ * @example firmware_update_example.c
+ * Full example showing a basic firmware-update flow.
+ */

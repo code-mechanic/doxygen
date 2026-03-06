@@ -1,0 +1,221 @@
+/* ------------------------------------------------------------------------- */
+/* Brand Tokens                                                              */
+/* ------------------------------------------------------------------------- */
+
+body,
+table,
+div,
+p,
+dl {
+  font-family: "DejaVu Sans", "Segoe UI", sans-serif;
+  color: #223128;
+}
+
+code,
+pre,
+div.line,
+div.fragment,
+.fragment .line {
+  font-family: "JetBrains Mono", "DejaVu Sans Mono", monospace;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(206, 163, 95, 0.16), transparent 26rem),
+    linear-gradient(180deg, #f7f1e6 0%, #efe4d0 100%);
+}
+
+a,
+.contents a:visited {
+  color: #8a4c2a;
+}
+
+a:hover {
+  color: #b26033;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Top Bar and Navigation                                                    */
+/* ------------------------------------------------------------------------- */
+
+#top {
+  background:
+    linear-gradient(135deg, #16342b 0%, #24493d 55%, #345c4d 100%);
+  border-bottom: 1px solid #cdb388;
+  box-shadow: 0 10px 30px rgba(15, 29, 24, 0.18);
+}
+
+#titlearea {
+  border-bottom: 0;
+}
+
+#projectname {
+  color: #f6efe4;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+#projectbrief {
+  color: rgba(246, 239, 228, 0.84);
+}
+
+.tabs,
+.tabs2,
+.tabs3 {
+  background: transparent;
+  border-bottom: 0;
+}
+
+.tablist li a {
+  background: rgba(246, 239, 228, 0.08);
+  border: 1px solid rgba(246, 239, 228, 0.14);
+  border-radius: 999px;
+  color: #f6efe4;
+  margin: 0.3rem 0.35rem;
+  padding: 0.5rem 0.95rem;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.tablist li.current a,
+.tablist li a:hover {
+  background: #d8b679;
+  border-color: #d8b679;
+  color: #17352b;
+  text-shadow: none;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Main Content                                                              */
+/* ------------------------------------------------------------------------- */
+
+div.contents {
+  max-width: 1120px;
+  margin: 1.4rem auto;
+  padding: 1.8rem 2rem;
+  background: rgba(255, 251, 245, 0.88);
+  border: 1px solid #ddc8a4;
+  border-radius: 18px;
+  box-shadow: 0 16px 38px rgba(60, 42, 22, 0.08);
+}
+
+div.headertitle,
+div.header {
+  background: transparent;
+  border-bottom: 0;
+}
+
+.title,
+h1,
+h2,
+h3,
+h4 {
+  color: #17352b;
+}
+
+.navpath ul {
+  background: rgba(237, 223, 198, 0.86);
+  border: 1px solid #d9c39f;
+  border-radius: 999px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* API Blocks                                                                */
+/* ------------------------------------------------------------------------- */
+
+.memitem {
+  margin: 1rem 0;
+  border: 1px solid #ddc8a4;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fffdf8;
+  box-shadow: 0 10px 24px rgba(51, 33, 18, 0.05);
+}
+
+.memtitle {
+  border-bottom: 0;
+  background: linear-gradient(90deg, #f2e3c7 0%, #ead5b1 100%);
+}
+
+.memproto,
+dl.reflist dt {
+  background: #f7ecda;
+  border: 0;
+}
+
+.memdoc,
+dl.reflist dd {
+  border-top: 1px solid #ebd8bb;
+  background: #fffdf8;
+}
+
+table.memberdecls,
+table.fieldtable,
+table.doxtable {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+dl.section dt {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  background: #17352b;
+  color: #f6efe4;
+  box-shadow: none;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Code and Diagrams                                                         */
+/* ------------------------------------------------------------------------- */
+
+div.fragment {
+  background: linear-gradient(180deg, #18231f 0%, #121a17 100%);
+  border: 1px solid #29463c;
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+div.fragment,
+div.line,
+span.keyword,
+span.keywordflow,
+span.comment,
+span.stringliteral {
+  text-shadow: none;
+}
+
+span.keyword,
+span.keywordflow {
+  color: #d9b76e;
+}
+
+span.comment {
+  color: #89b39f;
+}
+
+span.stringliteral {
+  color: #f0c98b;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Mobile                                                                    */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  div.contents {
+    margin: 0.75rem;
+    padding: 1.2rem;
+    border-radius: 14px;
+  }
+
+  #projectname {
+    font-size: 1.35rem;
+  }
+}

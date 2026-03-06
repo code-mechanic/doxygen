@@ -1,0 +1,8 @@
+/**
+ * @defgroup lesson3_board_support Board Support
+ * @brief Board-level embedded modules used by higher level firmware.
+ *
+ * This parent module collects low-level drivers and the services built on top
+ * of them. In larger embedded projects, group pages help you browse related
+ * APIs without hunting through file-by-file documentation.
+ */

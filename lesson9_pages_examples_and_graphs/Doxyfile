@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Project Identity
+# ---------------------------------------------------------------------------
+
+PROJECT_NAME = "Doxygen Hands-On Lesson 9"
+OPTIMIZE_OUTPUT_FOR_C = YES
+JAVADOC_AUTOBRIEF = YES
+
+# ---------------------------------------------------------------------------
+# Input Discovery
+# ---------------------------------------------------------------------------
+
+INPUT = README.md pages include src
+RECURSIVE = YES
+FILE_PATTERNS = *.h *.c *.md *.dox
+
+# ---------------------------------------------------------------------------
+# Example Files
+# ---------------------------------------------------------------------------
+
+EXAMPLE_PATH = examples
+EXAMPLE_PATTERNS = *.c
+EXAMPLE_RECURSIVE = YES
+
+# ---------------------------------------------------------------------------
+# Main Page and Page-Oriented Docs
+# ---------------------------------------------------------------------------
+
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# ---------------------------------------------------------------------------
+# Extraction and Warning Behavior
+# ---------------------------------------------------------------------------
+
+EXTRACT_ALL = NO
+EXTRACT_STATIC = YES
+WARN_IF_UNDOCUMENTED = YES
+QUIET = YES
+
+# ---------------------------------------------------------------------------
+# Output Formats and Navigation
+# ---------------------------------------------------------------------------
+
+OUTPUT_DIRECTORY = docs
+GENERATE_HTML = YES
+GENERATE_LATEX = YES
+GENERATE_TREEVIEW = YES
+
+# ---------------------------------------------------------------------------
+# Source Browsing and Cross-References
+# ---------------------------------------------------------------------------
+
+SOURCE_BROWSER = YES
+INLINE_SOURCES = YES
+REFERENCES_RELATION = YES
+REFERENCED_BY_RELATION = YES
+
+# ---------------------------------------------------------------------------
+# Graphs and Diagrams
+# ---------------------------------------------------------------------------
+
+HAVE_DOT = YES
+CALL_GRAPH = YES
+CALLER_GRAPH = YES
+DOT_IMAGE_FORMAT = svg
+DOT_TRANSPARENT = YES

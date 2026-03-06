@@ -1,0 +1,35 @@
+/**
+ * @page lesson9_integration Integration Notes
+ * @brief Practical notes for using page docs, examples, and source browsing.
+ *
+ * @tableofcontents
+ *
+ * @section lesson9_integration_pages Pages Versus API Comments
+ * Use header comments for API contracts such as `@param`, `@retval`, and
+ * preconditions. Use pages when you need:
+ * - a design explanation that spans several functions
+ * - onboarding steps for another developer
+ * - a state diagram or flow diagram
+ * - a link hub that connects examples, files, and APIs
+ *
+ * @section lesson9_integration_examples Examples and Snippets
+ * `@example` creates a full example page, while `@snippet` pulls out only the
+ * marked region you want to show inline.
+ *
+ * @section lesson9_integration_source Source Browser and Graphs
+ * This lesson enables `SOURCE_BROWSER`, `INLINE_SOURCES`,
+ * `REFERENCES_RELATION`, `REFERENCED_BY_RELATION`, `CALL_GRAPH`, and
+ * `CALLER_GRAPH`.
+ *
+ * That means a function page can show:
+ * - where a function is defined
+ * - which functions it calls
+ * - which functions call it
+ * - the related source view without leaving the docs
+ *
+ * @section lesson9_integration_start Suggested Reading Order
+ * 1. Main page in the generated documentation.
+ * 2. This page and @ref lesson9_architecture "Architecture and Flow".
+ * 3. The module page for @ref lesson9_fw_update.
+ * 4. The generated example page listed under Examples.
+ */
